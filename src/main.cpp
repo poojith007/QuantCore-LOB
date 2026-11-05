@@ -162,6 +162,9 @@ int main() {
 
     printLevel2Book(engine.orderBook());
 
+    // Disable verbose trade printing during high-speed benchmark
+    engine.setTradeCallback(nullptr);
+
     // Run performance benchmark
     runQuickBenchmark(engine, 250000);
 
